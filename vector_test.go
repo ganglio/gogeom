@@ -51,6 +51,7 @@ func TestVecLen(t *testing.T) {
 func TestVecNorm(t *testing.T) {
 	assert.Equal(t, Vec(1.0).Norm(), Vec(1.0))
 	assert.Equal(t, Vec(3.0, 4.0).Norm(), Vec(0.6, 0.8))
+	assert.Equal(t, Vec().Norm(), Vec())
 }
 
 func TestVecDot(t *testing.T) {

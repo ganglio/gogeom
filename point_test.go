@@ -40,3 +40,7 @@ func TestPointXYZ(t *testing.T) {
 	assert.Equal(t, a.Y(), 2.0)
 	assert.Equal(t, a.Z(), 3.0)
 }
+
+func TestPointVec(t *testing.T) {
+	assert.Equal(t, Point(1.0, 1.0).Vec(Point(3.0, 3.0)), Vec(2.0, 2.0))
+}

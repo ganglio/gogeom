@@ -38,3 +38,13 @@ func (p P) Y() float64 {
 func (p P) Z() float64 {
 	return p.Coordinate(2)
 }
+
+func (a P) Vec(b P) V {
+	l := max(a.Dimension(), b.Dimension())
+	o := []float64{}
+	for i := 0; i < l; i++ {
+		o = append(o, b.Coordinate(i)-a.Coordinate(i))
+	}
+
+	return V{o}
+}
